@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SpaceX System</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/080d3e35c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="landscape-msg" class="system landscape-msg">
+        <p>Please rotate your device to landscape mode to view this content.</p>
+    </div>
+    <div class="page system-page">
+        <header>
+            <div class="logo" id="logo">
+                <img src="images/logo.ico">
+            </div>
+            <div class="title">
+                <h2 class="system-name">Automobile enhancement system</h2>
+            </div>
+            <div class="logout-btn" id="logout">
+                <span>Logout</span>
+                <i class="bi bi-box-arrow-right"></i>
+            </div>
+        </header>
+        <section class="data-widget">
+            <div>
+                <iframe id="chart" width="450" height="260" src="https://thingspeak.com/channels/2117208/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </div>
+            <div class="alt-widgets">
+                <div>
+                    <iframe id="gauge" width="450" height="260" src="https://thingspeak.com/channels/2117208/widgets/643506"></iframe>
+                </div>
+                <div>
+                    <iframe id="alt_widget" width="450" height="260" src="https://thingspeak.com/channels/2117208/widgets/643507"></iframe>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p id="copyright">
+            &copy; Team Space X <span id="currentYear"></span>. All rights reserved.
+            </p>
+        </footer>
+    </div>
+    <script type="module" src="system.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
